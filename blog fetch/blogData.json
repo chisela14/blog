@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "chiselam",
+      "password": "admin1",
+      "email": "chisela14@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "nadiac",
+      "password": "admin2",
+      "email": "nadiacor@gmail.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "curso de javascript",
+      "authorId": 1,
+      "body": "asdhjk"
+    },
+    {
+      "id": 2,
+      "title": "feria de brenes",
+      "authorId": 2,
+      "body": "zcvn"
+    },
+    {
+      "id": 3,
+      "title": "convocatoria de huelga",
+      "authorId": 1,
+      "body": "qwer"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "hola",
+      "postId": 1,
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "body": "adios",
+      "postId": 1,
+      "authorId": 2
+    },
+    {
+      "body": "jkbghxdfgh xchgf",
+      "postId": "1",
+      "authorId": "2",
+      "id": 3
+    },
+    {
+      "body": "asdasdsf",
+      "postId": "1",
+      "authorId": "1",
+      "timestamp": 1666873650168,
+      "id": 4
+    }
+  ]
+}
