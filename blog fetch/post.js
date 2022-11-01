@@ -62,9 +62,12 @@ fetch(`http://localhost:3000/posts?id=${id}`)
                             user = user[0];
                             //muestro el comentario en la lista
                             let li = document.createElement("li");
-                            let textoCom = document.createTextNode(`${user.username}: ${comment.body}     `);
+                            let small = document.createElement("small");
+                            small.appendChild(document.createTextNode(`${comment.timestamp}`));
+                            let textoCom = document.createTextNode(`${user.username}: ${comment.body}    `);
                             //TO DO mostrar timestamp
                             li.appendChild(textoCom);
+                            li.appendChild(small);
                             listaCom.appendChild(li);
                         });
                 }
@@ -108,8 +111,9 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault();
     selectedUser = select.options[select.selectedIndex].value;
     //obtener fecha del momento y añadirla 
-    let fecha = Date.now();
-    let data = {"body": comment.value, "postId": id, "authorId": selectedUser, "timestamp": fecha};
+    let fecha = new Date(Date.now());
+    //si el nombre de la propiedad y el de la variable son iguales podemos poner solo la variable (en este caso no podemos)
+    let data = {"body": comment.value, "postId": id, "authorId": selectedUser, "timestamp": fecha.toLocaleString()};
     //guardo los datos en el json
     fetch('http://localhost:3000/comments', {
             method: 'POST', 
@@ -123,9 +127,9 @@ form.addEventListener('submit', (e)=>{
               return response.json();
             }
             return Promise.reject(response) 
-          })
-          .then(datos => datosServidor=datos)
-          .catch(err => {
-            console.log('Error en la petición HTTP: '+err.message);
-          });
+        })
+        .then(datos => datosServidor=datos)
+        .catch(err => {
+        console.log('Error en la petición HTTP: '+err.message);
+        });
 })

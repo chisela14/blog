@@ -38,26 +38,15 @@
       "id": 1,
       "body": "hola",
       "postId": 1,
-      "authorId": 1
+      "authorId": 1,
+      "timestamp": "10/31/2022, 10:10:00 PM"
     },
     {
       "id": 2,
       "body": "adios",
       "postId": 1,
-      "authorId": 2
-    },
-    {
-      "body": "jkbghxdfgh xchgf",
-      "postId": "1",
-      "authorId": "2",
-      "id": 3
-    },
-    {
-      "body": "asdasdsf",
-      "postId": "1",
-      "authorId": "1",
-      "timestamp": 1666873650168,
-      "id": 4
+      "authorId": 2,
+      "timestamp": "10/31/2022, 12:10:59 PM"
     }
   ]
 }
